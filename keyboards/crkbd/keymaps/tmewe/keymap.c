@@ -6,7 +6,7 @@
 #define L1_SPC LT(1, KC_SPC)
 // Right
 #define RCTL_ENT RCTL_T(KC_ENT)
-// Right
+// Left
 #define L2_BSPC LT(2, KC_BSPC)
 #define LCTL_TAB LCTL_T(KC_TAB)
 
