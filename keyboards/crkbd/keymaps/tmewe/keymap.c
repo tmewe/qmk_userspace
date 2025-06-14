@@ -20,7 +20,7 @@ combo_t key_combos[] = {
 // LAYER 0
 // Left-hand home row mods
 #define CTL_A LCTL_T(KC_A)
-#define ALT_S LALT_T(KC_S)
+#define ALT_S RALT_T(KC_S) // RALT for EurKey
 #define GUI_D LGUI_T(KC_D)
 #define SFT_F LSFT_T(KC_F)
 
@@ -33,21 +33,9 @@ combo_t key_combos[] = {
 // Used for Aerospace
 #define LCA_V LCA_T(KC_V)
 
-// Key overrides
-const key_override_t ae_key_override = ko_make_basic(MOD_MASK_ALT, CTL_A, RALT(KC_Q));
-const key_override_t oe_key_override = ko_make_basic(MOD_MASK_ALT, KC_O, RALT(KC_P));
-const key_override_t ue_key_override = ko_make_basic(MOD_MASK_ALT, KC_U, RALT(KC_Y));
-
-// This globally defines all key overrides to be used
-const key_override_t *key_overrides[] = {
-	&ae_key_override,
-	&oe_key_override,
-	&ue_key_override
-};
-
 // MS Teams
-#define SG_H SGUI(KC_H)
-#define SG_M SGUI(KC_M)
+#define SG_H SGUI(KC_H) // Leave call
+#define SG_M SGUI(KC_M) // Mute
 
 
 // LAYER 1
@@ -72,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
       CW_TOGG,   CTL_A,   ALT_S,   GUI_D,   SFT_F,    KC_G,    SG_M,    KC_VOLD,    KC_H,   SFT_J,   GUI_K,   ALT_L,  CTL_SC, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------+--------'  `--------+--------+--------+--------+--------+--------+--------|
-      _______,    KC_Z,    KC_X,    KC_C,   LCA_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_MPLY,
+      KC_BSLS,    KC_Z,    KC_X,    KC_C,   LCA_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_MPLY,
   //|--------+--------+--------+--------+--------+--------+--------.  ,--------+--------+--------+--------+--------+--------+--------|
                                           L2_BSPC,  L1_SPC,LCTL_TAB,   RCTL_ENT,  L1_SPC,  MO(2)
                                       //`--------------------------'  `--------------------------'
